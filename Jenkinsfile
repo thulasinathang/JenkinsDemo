@@ -24,11 +24,11 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     sh "cp target\\JenkinsPipeline.war \"${tomcatWeb}\\JenkinsPipeline.war\""
+     sh "cp target\\JenkinsPipeline.war \"${tomcatWeb}/JenkinsPipeline.war/""
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
-         sh "${tomcatBin}\\startup.bat"
+         sh "${tomcatBin}\\startup.sh"
          sleep(time:100,unit:"SECONDS")
    }
 }
